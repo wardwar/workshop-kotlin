@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".onboarding.OnboardingActivity">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonSkip"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/questrial"
+        android:text="@string/skip"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        app:cornerRadius="9dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/colorPrimary" />
+
+    <View
+        android:id="@+id/viewBg"
+        android:layout_width="match_parent"
+        android:layout_height="152dp"
+        android:background="@drawable/bg_top_rounded"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/onboardingPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonSkip" />
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/indicatorView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:tabBackground="@drawable/indicator_dot"
+        app:tabGravity="center"
+        app:tabIndicatorHeight="0dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

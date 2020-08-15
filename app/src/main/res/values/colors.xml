@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4E8CDE</color>
+    <color name="colorPrimaryDark">#4F64C7</color>
+    <color name="disableBlue">#D8DDF3</color>
+    <color name="colorAccent">#7D4AD4</color>
+    <color name="softBlue">#F0F3FF</color>
+    <color name="textHeading">#19224D</color>
+</resources>

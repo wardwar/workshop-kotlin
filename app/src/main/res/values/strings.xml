@@ -1,0 +1,25 @@
+    <resources>
+        <string name="app_name">Workshop Kotlin</string>
+        <string name="button_string">Ini button</string>
+        <string name="custom">Custom</string>
+        <string name="title">Personal Money\nManager</string>
+        <string name="version">Version 1.0</string>
+        <string name="title_onboarding_1">Manage Your Budgeting</string>
+        <string name="subtitle_onboarding_1">Easy manage your income and expense into category.</string>
+        <string name="title_onboarding_2">Track Your Expense</string>
+        <string name="subtitle_onboarding_2">Easy tracking and find your most spending at.</string>
+        <string name="title_onboarding_3">Set Your Goal</string>
+        <string name="subtitle_onboarding_3">You can set goals for your income and expense.</string>
+        <string name="skip">Skip</string>
+        <string name="title_register">Track your finance now!</string>
+        <string name="login">Login</string>
+        <string name="have_an_account">Already have an account?</string>
+        <string name="register_with_google">Register with google</string>
+        <string name="register">Register</string>
+        <string name="password">Password</string>
+        <string name="email">Email</string>
+        <string name="name">Name</string>
+        <string name="create_your_account">Create your account?</string>
+        <string name="welcome_back">Welcome Back!</string>
+        <string name="login_with_google">Login with google</string>
+    </resources>
