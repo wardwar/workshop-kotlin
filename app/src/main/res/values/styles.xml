@@ -12,4 +12,12 @@
         <item name="android:textSize">18sp</item>
     </style>
 
+    <style name="bottomNavigationStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+       <item name="android:fontFamily">@font/questrial</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.Button.Circle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
 </resources>

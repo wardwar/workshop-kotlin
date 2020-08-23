@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/softBlue"
-    tools:context=".SplashActivity">
+    tools:context=".splash.SplashActivity">
 
     <ImageView
         android:id="@+id/imgLogo"
@@ -21,11 +21,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/raleway_bold"
+        android:fontFamily="@font/raleway_bold_italic"
         android:gravity="center"
         android:text="@string/title"
-        android:textSize="24sp"
         android:textColor="@color/textHeading"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imgLogo" />

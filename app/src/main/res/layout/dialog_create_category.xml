@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="16dp"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    android:paddingBottom="16dp">
+
+
+
+    <com.vanniktech.emoji.EmojiEditText
+        android:id="@+id/emoji"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:background="@drawable/bg_rounded_gray"
+        android:fontFamily="@font/raleway_bold"
+        android:gravity="center"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        android:cursorVisible="false"
+        android:imeOptions="actionSend"
+        android:inputType="textCapSentences|textMultiLine"
+        android:maxLength="2"
+        android:textColor="@color/textSecondary"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/raleway_bold"
+        android:hint="@string/type_name"
+        android:textColor="@color/textSecondary"
+        android:textColorHint="@color/gray"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/emoji"
+        app:layout_constraintStart_toEndOf="@id/emoji"
+        app:layout_constraintTop_toTopOf="@id/emoji" />
+
+    <TextView
+        android:id="@+id/labelType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/raleway_bold"
+        android:text="@string/type"
+        android:textColor="@color/textSecondary"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emoji" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/labelType">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioIncome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorPrimary"
+            android:fontFamily="@font/raleway_bold"
+            android:text="@string/income"
+            android:textColor="@color/textSecondary" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioExpense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:buttonTint="@color/colorPrimary"
+            android:fontFamily="@font/raleway_bold"
+            android:text="@string/expense"
+            android:textColor="@color/textSecondary" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/labelLimit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/raleway_bold"
+        android:text="Limit"
+        android:textColor="@color/textSecondary"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupType" />
+
+    <TextView
+        android:id="@+id/labelOptional"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/questrial"
+        android:text="@string/optional"
+        android:textColor="@color/textSecondary"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/labelLimit"
+        app:layout_constraintStart_toEndOf="@id/labelLimit"
+        app:layout_constraintTop_toTopOf="@id/labelLimit" />
+
+    <EditText
+        android:id="@+id/inputLimit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/raleway_bold"
+        android:hint="Rp0"
+        android:inputType="number"
+        android:textColor="@color/textSecondary"
+        android:textColorHint="@color/gray"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelLimit" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonCreateCategory"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/raleway_bold"
+        android:letterSpacing="0"
+        android:text="@string/create_category"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        app:cornerRadius="5dp"
+        app:layout_constraintTop_toBottomOf="@id/inputLimit"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,8 +1,9 @@
-package app.by.wildan.workshopkotlin
+package app.by.wildan.workshopkotlin.splash
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import app.by.wildan.workshopkotlin.R
 import app.by.wildan.workshopkotlin.onboarding.OnboardingActivity
 import java.util.*
 import kotlin.concurrent.schedule
@@ -19,6 +20,7 @@ class SplashActivity : AppCompatActivity() {
 
     private fun navigateToOnboarding() {
         val intent = Intent(this, OnboardingActivity::class.java)
+        intent.putExtra("data","string")
         startActivity(intent)
         finish()
     }

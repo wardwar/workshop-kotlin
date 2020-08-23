@@ -25,7 +25,7 @@ class OnboardingActivity : AppCompatActivity() {
     }
 
     private fun setupOnboarding() {
-        val onboardingData = listOf<Onboarding>(
+        val onboardingData = listOf(
             Onboarding(
                 R.drawable.img_onboarding_1,
                 R.string.title_onboarding_1,

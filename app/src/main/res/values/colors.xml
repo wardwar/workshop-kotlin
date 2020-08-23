@@ -6,4 +6,9 @@
     <color name="colorAccent">#7D4AD4</color>
     <color name="softBlue">#F0F3FF</color>
     <color name="textHeading">#19224D</color>
+    <color name="textSecondary">#4f4f4f</color>
+    <color name="gray">#BDBDBD</color>
+    <color name="darkGray">#828282</color>
+    <color name="red">#EB5757</color>
+    <color name="green">#219653</color>
 </resources>

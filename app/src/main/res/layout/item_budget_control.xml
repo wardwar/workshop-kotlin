@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="328dp"
+    app:cardCornerRadius="5dp"
+    android:elevation="8dp"
+    app:cardBackgroundColor="@android:color/white"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        >
+
+        <TextView
+            android:id="@+id/emoji"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:background="@drawable/bg_rounded_gray"
+            android:text="📡"
+            android:gravity="center"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textBudgetTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/raleway_bold"
+            android:text="Internet"
+            android:textColor="@color/textSecondary"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/textBudgetAmount"
+            app:layout_constraintStart_toEndOf="@id/emoji"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/textBudgetAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/questrial"
+            android:text="Rp. 250.000"
+            android:textColor="@color/textSecondary"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toTopOf="@+id/progressBudget"
+            app:layout_constraintStart_toStartOf="@id/textBudgetTitle"
+            app:layout_constraintTop_toBottomOf="@+id/textBudgetTitle" />
+
+        <ProgressBar
+            android:id="@+id/progressBudget"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:progress="80"
+            android:minHeight="8dp"
+            android:layout_marginTop="8dp"
+            android:progressDrawable="@drawable/custom_progress_bar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/textBudgetTitle"
+            app:layout_constraintTop_toBottomOf="@+id/textBudgetAmount" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

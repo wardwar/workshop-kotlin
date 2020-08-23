@@ -1,16 +1,18 @@
-package app.by.wildan.workshopkotlin.onboarding
+package app.by.wildan.workshopkotlin.main.ui.home
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import app.by.wildan.workshopkotlin.R
-import kotlinx.android.synthetic.main.item_onboarding.view.*
+import app.by.wildan.workshopkotlin.main.ui.home.domain.Transaction
 
-class OnboardingAdapter(val items: List<Onboarding>) : RecyclerView.Adapter<OnboardingAdapter.ViewHolder>() {
+class TransactionAdapter(val items: List<Transaction>) :
+    RecyclerView.Adapter<TransactionAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view  = LayoutInflater.from(parent.context).inflate(R.layout.item_onboarding,parent,false)
+        val view =
+            LayoutInflater.from(parent.context).inflate(R.layout.item_transaction, parent, false)
         return ViewHolder(view)
     }
 
@@ -19,17 +21,14 @@ class OnboardingAdapter(val items: List<Onboarding>) : RecyclerView.Adapter<Onbo
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        with(holder){
+        with(holder) {
             bind(items[position])
         }
     }
 
 
     inner class ViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
-        fun bind(item: Onboarding) = with(view){
-            imgDisplay.setImageResource(item.image)
-            textTitle.setText(item.title)
-            textSubtitle.setText(item.subtitle)
+        fun bind(item: Transaction) = with(view) {
         }
 
     }
