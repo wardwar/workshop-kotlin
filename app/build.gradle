@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
@@ -45,6 +46,13 @@ dependencies {
 
     implementation 'com.vanniktech:emoji-google:0.7.0'
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    implementation 'com.google.firebase:firebase-analytics:17.5.0'
+
+    implementation 'com.google.firebase:firebase-auth-ktx:19.3.2'
+    implementation 'com.google.firebase:firebase-database-ktx:19.4.0'
+    implementation 'com.google.android.gms:play-services-auth:18.1.0'
+
 
 
 }

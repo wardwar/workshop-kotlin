@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1028756106134",
+    "firebase_url": "https://workshop-kotlin.firebaseio.com",
+    "project_id": "workshop-kotlin",
+    "storage_bucket": "workshop-kotlin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1028756106134:android:e20e6f27c8a94c28918bb7",
+        "android_client_info": {
+          "package_name": "app.by.wildan.workshopkotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1028756106134-llkfcjdiu010ta1n6kh2r5vvfikpvsjm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.by.wildan.workshopkotlin",
+            "certificate_hash": "3beecdb49e05628bd6929458c8981cc04df92448"
+          }
+        },
+        {
+          "client_id": "1028756106134-fn2b09loct7q9hglpoj0l71k2bgmtm3m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBndq74e1B_Na-LwTTbnl3SEzbCrG7McCw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1028756106134-fn2b09loct7q9hglpoj0l71k2bgmtm3m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

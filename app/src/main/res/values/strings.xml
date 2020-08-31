@@ -25,8 +25,6 @@
     <string name="home">Home</string>
     <string name="transaction">Transaction</string>
     <string name="report">Report</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="greeting">Hai, Wildan</string>
     <string name="home_subtitle">Control your expense, control your life</string>
     <string name="monthly_overview">Monthly Overview</string>
