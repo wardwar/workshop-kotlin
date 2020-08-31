@@ -138,5 +138,15 @@
         app:layout_constraintTop_toBottomOf="@id/inputLimit"
         app:layout_constraintBottom_toBottomOf="parent" />
 
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/buttonCreateCategory"
+        app:layout_constraintBottom_toBottomOf="@id/buttonCreateCategory"
+        app:layout_constraintStart_toStartOf="@id/buttonCreateCategory"
+        app:layout_constraintEnd_toEndOf="@id/buttonCreateCategory"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

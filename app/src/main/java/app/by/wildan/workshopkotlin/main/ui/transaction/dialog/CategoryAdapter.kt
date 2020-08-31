@@ -8,14 +8,22 @@ import androidx.recyclerview.widget.RecyclerView
 import app.by.wildan.workshopkotlin.R
 import kotlinx.android.synthetic.main.item_category.view.*
 
-class CategoryAdapter(val items: List<Category>) :
-    RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
+class CategoryAdapter : RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
+    private val items : MutableList<Category> = mutableListOf()
 
     private var listener: AdapterView.OnItemClickListener? = null
 
     fun addOnItemSelected(selected: (Category) -> Unit) {
         listener = AdapterView.OnItemClickListener { parent, view, position, id ->
             selected(items[position])
+        }
+    }
+
+    fun updateData( updateList:List<Category>){
+        this.items.apply {
+            clear()
+            addAll(updateList)
+            notifyDataSetChanged()
         }
     }
 

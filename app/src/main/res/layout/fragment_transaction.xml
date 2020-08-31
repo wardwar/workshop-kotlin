@@ -391,5 +391,15 @@
         app:cornerRadius="5dp"
         app:layout_constraintBottom_toBottomOf="parent" />
 
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/buttonSetAmount"
+        app:layout_constraintBottom_toBottomOf="@id/buttonSetAmount"
+        app:layout_constraintStart_toStartOf="@id/buttonSetAmount"
+        app:layout_constraintEnd_toEndOf="@id/buttonSetAmount"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
