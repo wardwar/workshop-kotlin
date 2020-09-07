@@ -10,8 +10,18 @@ import app.by.wildan.workshopkotlin.extension.toRupiahFormat
 import app.by.wildan.workshopkotlin.main.ui.home.domain.BudgetControl
 import kotlinx.android.synthetic.main.item_budget_control.view.*
 
-class BudgetControlAdapter(val items: List<BudgetControl>) :
+class BudgetControlAdapter :
     RecyclerView.Adapter<BudgetControlAdapter.ViewHolder>() {
+    private val items: MutableList<BudgetControl> = mutableListOf()
+
+
+    fun updateData(updateList: List<BudgetControl>) {
+        this.items.apply {
+            clear()
+            addAll(updateList)
+            notifyDataSetChanged()
+        }
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view =

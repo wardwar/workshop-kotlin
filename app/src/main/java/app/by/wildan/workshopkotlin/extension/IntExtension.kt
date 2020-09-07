@@ -10,6 +10,7 @@ fun Int.toRupiahFormat(): String {
     return format.format(this)
 }
 
+
 fun Int.percentOf(value:Int):Int{
     return ((this.toFloat()/value.toFloat()) * 100).toInt()
 }

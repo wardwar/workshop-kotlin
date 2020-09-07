@@ -11,8 +11,17 @@ import app.by.wildan.workshopkotlin.extension.toRupiahFormat
 import app.by.wildan.workshopkotlin.main.ui.home.domain.Transaction
 import kotlinx.android.synthetic.main.item_transaction.view.*
 
-class TransactionAdapter(val items: List<Transaction>) :
+class TransactionAdapter :
     RecyclerView.Adapter<TransactionAdapter.ViewHolder>() {
+    private val items: MutableList<Transaction> = mutableListOf()
+
+    fun updateData(updateList: List<Transaction>) {
+        this.items.apply {
+            clear()
+            addAll(updateList)
+            notifyDataSetChanged()
+        }
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view =
