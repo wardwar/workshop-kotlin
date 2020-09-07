@@ -6,7 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import app.by.wildan.workshopkotlin.R
+import app.by.wildan.workshopkotlin.main.ui.home.TransactionAdapter
+import app.by.wildan.workshopkotlin.main.ui.home.domain.Transaction
+import app.by.wildan.workshopkotlin.main.ui.transaction.dialog.Category
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
@@ -16,6 +20,9 @@ import kotlinx.android.synthetic.main.fragment_report.*
 
 
 class ReportFragment : Fragment() {
+
+    private lateinit var spendingAdapter: SpendingAdapter
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,6 +39,8 @@ class ReportFragment : Fragment() {
         chartReport.description.isEnabled = false
 
         setData()
+
+        setupSpendingList()
     }
 
     private fun setData() {
@@ -58,5 +67,36 @@ class ReportFragment : Fragment() {
         chartReport.data = data
         chartReport.highlightValues(null)
         chartReport.invalidate()
+    }
+
+    private fun setupSpendingList() {
+        val dummyData = listOf(
+            Transaction(
+                100000,
+                "1598908136284",
+                Category(name = "Food", key = "2", type = "expense")
+            ),
+            Transaction(
+                100000,
+                "1598908136284",
+                Category(name = "Internet", key = "3", type = "income")
+            ),
+            Transaction(
+                50000,
+                "1598908136284",
+                Category(name = "Gas", key = "4", type = "expense")
+            ),
+            Transaction(
+                800000,
+                "1598908136284",
+                Category(name = "Party", key = "5", type = "expense")
+            )
+        ).sortedByDescending { it.amount }
+
+        spendingAdapter = SpendingAdapter(dummyData)
+        listSpending.apply {
+            adapter = spendingAdapter
+            layoutManager = LinearLayoutManager(requireContext())
+        }
     }
 }
