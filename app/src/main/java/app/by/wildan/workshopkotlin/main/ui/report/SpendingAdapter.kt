@@ -13,8 +13,18 @@ import kotlinx.android.synthetic.main.item_transaction.view.emoji
 import kotlinx.android.synthetic.main.item_transaction.view.textAmount
 import kotlinx.android.synthetic.main.item_transaction.view.textBudgetTitle
 
-class SpendingAdapter(val items: List<Transaction>) :
+class SpendingAdapter() :
     RecyclerView.Adapter<SpendingAdapter.ViewHolder>() {
+
+    private val items: MutableList<Transaction> = mutableListOf()
+
+    fun updateData(updateList: List<Transaction>) {
+        this.items.apply {
+            clear()
+            addAll(updateList)
+            notifyDataSetChanged()
+        }
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view =

@@ -42,7 +42,7 @@ class CreateCategoryDialog : DialogFragment() {
         }
 
         buttonCreateCategory.setOnClickListener {
-            val type = if (radioIncome.isSelected) "income" else "expense"
+            val type = if (radioIncome.isChecked) "income" else "expense"
             val payload = Category(
                 emoji.text.toString(),
                 inputLimit.text.toString().ifBlank { "0" }.toInt(),

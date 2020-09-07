@@ -51,6 +51,19 @@ val List<Transaction>.budgetControlMonthly: List<BudgetControl>
             )
         }
 
+val List<Transaction>.reportMontly: List<Transaction>
+    get() = thisMonth
+        .distinctBy { it.category?.key }
+        .groupBy {
+            it.category
+        }.map {
+            Transaction(
+                it.value.sumBy { it.amount ?: 0 },
+                "",
+                it.key
+            )
+        }.sortedByDescending { it.amount }
+
 val List<Transaction>.filterMonthly: List<Category>
     get() = thisMonth.distinctBy { it.category?.key }
         .groupBy {
