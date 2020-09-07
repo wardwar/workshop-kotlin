@@ -11,12 +11,16 @@ import androidx.recyclerview.widget.SnapHelper
 import app.by.wildan.workshopkotlin.R
 import app.by.wildan.workshopkotlin.common.HorizontalMarginDecorator
 import app.by.wildan.workshopkotlin.main.ui.home.domain.BudgetControl
+import app.by.wildan.workshopkotlin.main.ui.home.domain.Transaction
+import app.by.wildan.workshopkotlin.main.ui.transaction.dialog.Category
 import kotlinx.android.synthetic.main.fragment_home.*
 
 
 class HomeFragment : Fragment() {
 
     private lateinit var budgetControlAdapter: BudgetControlAdapter
+    private lateinit var filterAdapter: FilterAdapter
+    private lateinit var transactionAdapter: TransactionAdapter
 
 
     override fun onCreateView(
@@ -31,8 +35,8 @@ class HomeFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         setupBudgetList()
-//        setupFilterlist()
-//        setupTransactionList()
+        setupFilterList()
+        setupTransactionList()
 
 
     }
@@ -65,13 +69,53 @@ class HomeFragment : Fragment() {
 
             val firstLast = resources.getDimension(R.dimen.dp16).toInt()
             val rightLeftDefault = resources.getDimension(R.dimen.dp4).toInt()
-            val topBottomDefault  = resources.getDimension(R.dimen.dp8).toInt()
+            val topBottomDefault = resources.getDimension(R.dimen.dp8).toInt()
 
-            val decorator = HorizontalMarginDecorator(firstLast,rightLeftDefault,topBottomDefault)
+            val decorator = HorizontalMarginDecorator(firstLast, rightLeftDefault, topBottomDefault)
             addItemDecoration(decorator)
         }
 
         val snapHelper: SnapHelper = LinearSnapHelper()
         snapHelper.attachToRecyclerView(listBudgetControl)
     }
+
+    private fun setupFilterList() {
+        val dummyData = listOf(
+            Category(name = "All", selected = true, key = "1"),
+            Category(name = "Food", key = "2"),
+            Category(name = "Internet", key = "3"),
+            Category(name = "Gas", key = "4"),
+            Category(name = "Party", key = "5")
+        )
+
+        filterAdapter = FilterAdapter(dummyData)
+        listFilter.apply {
+            adapter = filterAdapter
+            layoutManager =
+                LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+            val firstLast = resources.getDimension(R.dimen.dp16).toInt()
+            val rightLeftDefault = resources.getDimension(R.dimen.dp4).toInt()
+            val topBottomDefault = resources.getDimension(R.dimen.dp8).toInt()
+
+            val decorator = HorizontalMarginDecorator(firstLast, rightLeftDefault, topBottomDefault)
+            addItemDecoration(decorator)
+        }
+
+    }
+
+    private fun setupTransactionList() {
+        val dummyData = listOf(
+            Transaction(10000, "1598908136284", Category(name = "Food", key = "2",type = "expense")),
+            Transaction(100000, "1598908136284", Category(name = "Internet", key = "3",type = "income")),
+            Transaction(50000, "1598908136284", Category(name = "Gas", key = "4",type = "expense")),
+            Transaction(800000, "1598908136284", Category(name = "Party", key = "5",type = "expense"))
+        )
+
+        transactionAdapter = TransactionAdapter(dummyData)
+        listTransaction.apply {
+            adapter = transactionAdapter
+            layoutManager = LinearLayoutManager(requireContext())
+        }
+    }
+
 }

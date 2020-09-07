@@ -11,4 +11,6 @@
     <color name="darkGray">#828282</color>
     <color name="red">#EB5757</color>
     <color name="green">#219653</color>
+    <color name="softRed">#F0E3EE</color>
+    <color name="softGreen">#DBEAEE</color>
 </resources>
